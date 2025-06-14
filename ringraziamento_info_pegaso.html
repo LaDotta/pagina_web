@@ -224,6 +224,16 @@
             z-index: 1;
         }
         
+        .highlight-box h3 .mobile-break {
+            display: none;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .highlight-box h3 .mobile-break {
+                display: block;
+            }
+        }
+        
         .highlight-box p {
             font-size: 1.1rem;
             opacity: 0.95;
@@ -620,7 +630,7 @@
         <p class="subtitle">La tua richiesta è stata inviata con successo</p>
         
         <div class="highlight-box">
-            <h3>🎓 Il tuo percorso universitario inizia qui</h3>
+            <h3>🎓 Il tuo percorso<span class="mobile-break"><br></span> universitario<span class="mobile-break"><br></span> inizia qui</h3>
             <p>Siamo entusiasti di accompagnarti verso il tuo futuro accademico e professionale con Università Pegaso</p>
         </div>
         
