@@ -382,29 +382,35 @@
             margin-top: 25px;
             display: flex;
             justify-content: center;
+            align-items: center;
             gap: 15px;
+            flex-wrap: wrap;
         }
         
         .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 45px;
-            height: 45px;
-            background: #f8f9fa;
-            border-radius: 50%;
-            color: var(--text-light);
+            display: inline-block;
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
             text-decoration: none;
-            font-size: 1.2rem;
             transition: all 0.3s ease;
-            border: 1px solid #e1e8ed;
+        }
+        
+        .social-links a img {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
         }
         
         .social-links a:hover {
-            background: var(--primary-color);
-            color: white;
             transform: translateY(-3px) scale(1.1);
-            border-color: var(--primary-color);
+        }
+        
+        .social-links a:hover img {
+            filter: drop-shadow(0 4px 8px rgba(208, 2, 27, 0.3)) brightness(1.1);
         }
         
         /* Loading animation */
@@ -488,6 +494,15 @@
             
             .highlight-box {
                 padding: 20px 15px;
+            }
+            
+            .social-links {
+                gap: 12px;
+            }
+            
+            .social-links a img {
+                width: 45px;
+                height: 45px;
             }
         }
         
@@ -606,29 +621,24 @@
         
         <div class="highlight-box">
             <h3>🎓 Il tuo percorso universitario inizia qui</h3>
-            <p>Siamo entusiasti di accompagnarti verso il tuo futuro accademico e professionale con Università Pegaso, Mercatorum e San Raffaele</p>
+            <p>Siamo entusiasti di accompagnarti verso il tuo futuro accademico e professionale con Università Pegaso</p>
         </div>
         
         <div class="info-grid">
             <div class="info-card">
                 <h3>📞 Prossimi Passi</h3>
-                <p>Un nostro <strong>tutor specializzato</strong> ti contatterà entro <strong>24 ore</strong> per fornirti tutte le informazioni sui corsi di tuo interesse e le convenzioni disponibili.</p>
+                <p>Un nostro <strong>tutor specializzato</strong> ti contatterà <strong>a breve</strong> per fornirti tutte le informazioni sui corsi di tuo interesse e le convenzioni disponibili.</p>
                 <p>Nel frattempo, controlla la tua email per la conferma dettagliata con tutte le informazioni sui costi e le agevolazioni.</p>
             </div>
             
             <div class="info-card">
                 <h3>📧 I Nostri Contatti</h3>
-                <p><strong>Telefono:</strong> <a href="tel:3342892100">334 2892 100</a> (digitare 2)</p>
+                <p><strong>Telefono:</strong>&nbsp;<strong>334&nbsp;2892&nbsp;100</strong>&nbsp;(digitare&nbsp;2)</p>
+                <p><strong>Email:</strong> <a href="mailto:ecpladotta@unipegaso.it">ecpladotta@unipegaso.it</a></p>
                 <p><strong>Sito web:</strong> <a href="http://www.pololadotta.it">www.pololadotta.it</a></p>
-                <p><strong>Orari:</strong> Lun-Ven 9:00-18:00</p>
+                <p><strong>Orari:</strong><br>Lun-Ven 9:00-18:30<br>Sab 9:30-12:30</p>
                 <p>Per qualsiasi domanda urgente, siamo qui per aiutarti!</p>
             </div>
-        </div>
-        
-        <div class="cta-buttons">
-            <a href="#" class="btn btn-primary" id="course-btn">📚 Scopri i Corsi</a>
-            <a href="http://www.pololadotta.it" class="btn btn-secondary">🏠 Torna al Sito</a>
-            <a href="tel:3342892100" class="btn btn-secondary">📞 Chiamaci Ora</a>
         </div>
         
         <div class="footer">
@@ -637,11 +647,34 @@
             <p>Certificazioni linguistiche e informatiche EIPASS | Centro AULAB | Sole 24 Ore Formazione</p>
             
             <div class="social-links">
-                <a href="#" title="Instagram Polo La Dotta" aria-label="Visita il nostro Instagram">📷</a>
-                <a href="#" title="Instagram San Raffaele" aria-label="Instagram San Raffaele">📷</a>
-                <a href="#" title="LinkedIn" aria-label="Collegati con noi su LinkedIn">💼</a>
-                <a href="#" title="Facebook" aria-label="Visita la nostra pagina Facebook">📘</a>
-                <a href="#" title="TikTok" aria-label="Seguici su TikTok">🎵</a>
+                <!-- Instagram Polo La Dotta -->
+                <a href="https://www.instagram.com/unipegaso_ladotta_official/" target="_blank" title="Instagram Polo La Dotta" aria-label="Visita il nostro Instagram">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Polo La Dotta">
+                </a>
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/unipegaso.ladotta" target="_blank" title="Facebook" aria-label="Visita la nostra pagina Facebook">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Facebook-icon-1.png" alt="Facebook">
+                </a>
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/company/polo-la-dotta/" target="_blank" title="LinkedIn" aria-label="Collegati con noi su LinkedIn">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+                </a>
+                <!-- TikTok -->
+                <a href="https://www.tiktok.com/@pololadotta_official" target="_blank" title="TikTok" aria-label="Seguici su TikTok">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tiktok.svg" alt="TikTok">
+                </a>
+                <!-- Telegram -->
+                <a href="https://t.me/PegasoMercatorum" target="_blank" title="Telegram" aria-label="Unisciti al nostro Telegram">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+                </a>
+                <!-- WhatsApp -->
+                <a href="https://api.whatsapp.com/send?phone=3760048067" target="_blank" title="WhatsApp" aria-label="Contattaci su WhatsApp">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                </a>
+                <!-- Instagram San Raffaele -->
+                <a href="https://www.instagram.com/universita_sanraffaele_ladotta/" target="_blank" title="Instagram San Raffaele" aria-label="Instagram San Raffaele">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram San Raffaele">
+                </a>
             </div>
         </div>
     </div>
