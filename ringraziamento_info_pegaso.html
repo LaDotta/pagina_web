@@ -313,6 +313,53 @@
             font-weight: bold;
         }
         
+        .info-card .contact-icons {
+            margin-top: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: flex-start;
+        }
+        
+        .info-card .contact-icons .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .info-card .contact-icons .contact-label {
+            font-weight: bold;
+            color: var(--text-light);
+            min-width: 90px;
+        }
+        
+        .info-card .contact-icons a {
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .info-card .contact-icons img {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+            transition: all 0.3s ease;
+        }
+        
+        .info-card .contact-icons img[alt="Telegram"] {
+            width: 35px;
+            height: 35px;
+        }
+        
+        .info-card .contact-icons a:hover {
+            transform: translateY(-2px) scale(1.05);
+        }
+        
+        .info-card .contact-icons a:hover img {
+            filter: drop-shadow(0 4px 8px rgba(208, 2, 27, 0.3)) brightness(1.1);
+        }
+        
         .contact-indent {
             margin-left: 10px;
         }
@@ -662,7 +709,924 @@
             <div class="info-card">
                 <h3>📧 I Nostri Contatti</h3>
                 <p><strong>Telefono:</strong><br><span class="phone-number">334&nbsp;2892&nbsp;100</span>&nbsp;(digitare&nbsp;2)</p>
-                <p><strong>Email:</strong> <a href="mailto:ecpladotta@unipegaso.it">ecpladotta@unipegaso.it</a></p>
+                <p><strong>Email:</strong><br><a href="mailto:ecpladotta@unipegaso.it"><strong>ecpladotta@unipegaso.it</strong></a></p>
+                
+                <div class="contact-icons">
+                    <div class="contact-row">
+                        <a href="https://api.whatsapp.com/send?phone=3760048067" target="_blank" title="WhatsApp" aria-label="Contattaci su WhatsApp">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                        </a>
+                        <span class="contact-label">WhatsApp</span>
+                    </div>
+                    <div class="contact-row">
+                        <a href="https://t.me/PegasoMercatorum" target="_blank" title="Telegram" aria-label="Unisciti al nostro Telegram">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+                        </a>
+                        <span class="contact-label">Telegram</span>
+                    </div>
+                </div>
+                
+                <p><strong>Sito web:</strong><br><strong><a href="http://www.pololadotta.it">www.pololadotta.it</a></strong></p>
+                <p><strong>Orari:</strong><br><span class="schedule-text">Lun-Ven 9:00-18:30<br>Sab 9:30-12:30</span></p>
+                <p>Per qualsiasi domanda urgente, siamo qui per aiutarti!</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>© 2024 Polo Didattico LA DOTTA</strong></p>
+            <p>Università PEGASO | Università MERCATORUM | Università San Raffaele Roma</p>
+            <p>Certificazioni linguistiche e informatiche EIPASS | Centro AULAB | Sole 24 Ore Formazione</p>
+            
+            <div class="social-links">
+                <!-- Instagram Polo La Dotta -->
+                <a href="https://www.instagram.com/unipegaso_ladotta_official/" target="_blank" title="Instagram Polo La Dotta" aria-label="Visita il nostro Instagram">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Polo La Dotta">
+                </a>
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/unipegaso.ladotta" target="_blank" title="Facebook" aria-label="Visita la nostra pagina Facebook">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Facebook-icon-1.png" alt="Facebook">
+                </a>
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/company/polo-la-dotta/" target="_blank" title="LinkedIn" aria-label="Collegati con noi su LinkedIn">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+                </a>
+                <!-- TikTok -->
+                <a href="https://www.tiktok.com/@pololadotta_official" target="_blank" title="TikTok" aria-label="Seguici su TikTok">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tiktok.svg" alt="TikTok">
+                </a>
+                <!-- Telegram -->
+                <a href="https://t.me/PegasoMercatorum" target="_blank" title="Telegram" aria-label="Unisciti al nostro Telegram">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+                </a>
+                <!-- WhatsApp -->
+                <a href="https://api.whatsapp.com/send?phone=3760048067" target="_blank" title="WhatsApp" aria-label="Contattaci su WhatsApp">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                </a>
+                <!-- Instagram San Raffaele -->
+                <a href="https://www.instagram.com/universita_sanraffaele_ladotta/" target="_blank" title="Instagram San Raffaele" aria-label="Instagram San Raffaele">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram San Raffaele">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set CSS custom properties for viewport height
+        function setVH() {
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+        
+        // Initial setting and event listeners
+        setVH();
+        window.addEventListener('resize', setVH);
+        window.addEventListener('orientationchange', () => setTimeout(setVH, 100));
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // URL Parameters handling
+            const urlParams = new URLSearchParams(window.location.search);
+            const courseUrl = urlParams.get('course_url');
+            const userName = urlParams.get('name');
+            const userEmail = urlParams.get('email');
+            
+            // Customize title if name is provided
+            if (userName) {
+                const title = document.getElementById('main-title');
+                title.textContent = `Grazie ${decodeURIComponent(userName)}!`;
+            }
+            
+            // Update course link if specified
+            if (courseUrl) {
+                const courseBtn = document.getElementById('course-btn');
+                courseBtn.href = decodeURIComponent(courseUrl);
+            }
+            
+            // Analytics tracking
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'page_view', {
+                    'page_title': 'Thank You Page - Polo La Dotta',
+                    'page_location': window.location.href,
+                    'custom_parameter_1': userName || 'anonymous',
+                    'custom_parameter_2': courseUrl || 'generic'
+                });
+                
+                gtag('event', 'form_completion', {
+                    'event_category': 'engagement',
+                    'event_label': 'university_interest_form_polo_ladotta'
+                });
+            }
+            
+            // Facebook Pixel tracking
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead', {
+                    content_name: 'Polo La Dotta Interest Form',
+                    content_category: 'Education'
+                });
+            }
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Prevent zoom on double tap (iOS)
+            let lastTouchEnd = 0;
+            document.addEventListener('touchend', function (event) {
+                const now = (new Date()).getTime();
+                if (now - lastTouchEnd <= 300) {
+                    event.preventDefault();
+                }
+                lastTouchEnd = now;
+            }, false);
+            
+            // Performance monitoring
+            if ('performance' in window) {
+                window.addEventListener('load', function() {
+                    const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+                    console.log('Page load time:', loadTime + 'ms');
+                    
+                    // Send to analytics if available
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'timing_complete', {
+                            'name': 'page_load',
+                            'value': loadTime
+                        });
+                    }
+                });
+            }
+        });
+        
+        // Course button click handler
+        document.getElementById('course-btn').addEventListener('click', function(e) {
+            const urlParams = new URLSearchParams(window.location.search);
+            const courseUrl = urlParams.get('course_url');
+            
+            if (courseUrl) {
+                e.preventDefault();
+                window.open(decodeURIComponent(courseUrl), '_blank');
+                
+                // Track click
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'click', {
+                        'event_category': 'engagement',
+                        'event_label': 'course_discover_button_polo_ladotta',
+                        'value': courseUrl
+                    });
+                }
+            }
+        });
+        
+        // Service Worker registration for PWA capabilities
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Grazie | Polo La Dotta - Università Telematica</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Grazie per aver inviato la tua richiesta. Il nostro team ti contatterà presto per il tuo percorso universitario.">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="author" content="Polo La Dotta">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Richiesta Inviata con Successo">
+    <meta property="og:description" content="Il tuo percorso universitario inizia qui">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.jotform.com/uploads/PoloLaDotta/form_files/Logo%20LaDotta%20jotform.684bd334223e42.34157486.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Verdana:wght@300;400;600;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Variables - Colori Polo La Dotta */
+        :root {
+            --primary-color: #d0021b;
+            --secondary-color: #a00116;
+            --accent-color: #ff1a35;
+            --text-dark: #2c3e50;
+            --text-light: #5a6c7d;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --gradient-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            --shadow: 0 20px 60px rgba(208, 2, 27, 0.1);
+            --border-radius: 20px;
+            --vh: 1vh;
+        }
+        
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Body e HTML */
+        html {
+            scroll-behavior: smooth;
+            height: 100%;
+        }
+        
+        body {
+            font-family: 'Verdana', 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--gradient-bg);
+            min-height: 100vh;
+            min-height: calc(var(--vh, 1vh) * 100);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        /* Animated background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(208, 2, 27, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(208, 2, 27, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(160, 1, 22, 0.1) 0%, transparent 50%);
+            animation: float 15s ease-in-out infinite;
+            z-index: -1;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-20px) scale(1.05); }
+        }
+        
+        /* Container principale */
+        .container {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 60px 40px;
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            animation: slideUp 0.8s ease-out;
+            backdrop-filter: blur(10px);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--gradient-primary);
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+        }
+        
+        /* Logo */
+        .logo {
+            margin-bottom: 40px;
+            animation: fadeIn 1s ease-out 0.3s both;
+        }
+        
+        .logo img {
+            max-width: 350px;
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 4px 8px rgba(208, 2, 27, 0.2));
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Success icon */
+        .success-icon {
+            font-size: 5rem;
+            color: #27ae60;
+            margin-bottom: 30px;
+            animation: bounce 1.5s ease-in-out infinite, fadeIn 1s ease-out 0.5s both;
+            text-shadow: 0 4px 8px rgba(39, 174, 96, 0.3);
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-15px);
+            }
+            60% {
+                transform: translateY(-7px);
+            }
+        }
+        
+        /* Typography */
+        h1 {
+            color: var(--primary-color);
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            animation: fadeIn 1s ease-out 0.7s both;
+            text-shadow: 0 2px 4px rgba(208, 2, 27, 0.1);
+        }
+        
+        .subtitle {
+            color: var(--text-light);
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin-bottom: 50px;
+            line-height: 1.5;
+            animation: fadeIn 1s ease-out 0.9s both;
+        }
+        
+        /* Highlight box */
+        .highlight-box {
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
+            text-align: center;
+            animation: fadeIn 1s ease-out 1.1s both;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(208, 2, 27, 0.3);
+        }
+        
+        .highlight-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+        
+        .highlight-box h3 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .highlight-box h3 .mobile-break {
+            display: none;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .highlight-box h3 {
+                line-height: 1.1;
+            }
+            
+            .highlight-box h3 .mobile-break {
+                display: block;
+            }
+        }
+        
+        .highlight-box p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Info grid */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+            animation: fadeIn 1s ease-out 1.3s both;
+        }
+        
+        .info-card {
+            background: var(--bg-light);
+            border-radius: 15px;
+            padding: 30px 25px;
+            border-left: 5px solid var(--primary-color);
+            transition: all 0.3s ease;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(208, 2, 27, 0.1);
+        }
+        
+        .info-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(208, 2, 27, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(208, 2, 27, 0.2);
+            border-left-color: var(--accent-color);
+        }
+        
+        .info-card:hover::before {
+            left: 100%;
+        }
+        
+        .info-card h3 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .info-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+        
+        .info-card .schedule-text {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        .info-card .phone-number {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        .info-card .contact-icons {
+            margin-top: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: flex-start;
+        }
+        
+        .info-card .contact-icons .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .info-card .contact-icons .contact-label {
+            font-weight: bold;
+            color: var(--text-light);
+            min-width: 90px;
+        }
+        
+        .info-card .contact-icons a {
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .info-card .contact-icons img {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+            transition: all 0.3s ease;
+        }
+        
+        .info-card .contact-icons img[alt="Telegram"] {
+            width: 35px;
+            height: 35px;
+        }
+        
+        .info-card .contact-icons a:hover {
+            transform: translateY(-2px) scale(1.05);
+        }
+        
+        .info-card .contact-icons a:hover img {
+            filter: drop-shadow(0 4px 8px rgba(208, 2, 27, 0.3)) brightness(1.1);
+        }
+        
+        .contact-indent {
+            margin-left: 10px;
+        }
+        
+        .info-card a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .info-card a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+        
+        /* CTA Buttons */
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+            animation: fadeIn 1s ease-out 1.5s both;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 18px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            min-width: 200px;
+            text-align: center;
+            font-family: 'Verdana', sans-serif;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: 0 4px 15px rgba(208, 2, 27, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(208, 2, 27, 0.4);
+        }
+        
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            box-shadow: 0 4px 15px rgba(208, 2, 27, 0.1);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(208, 2, 27, 0.3);
+        }
+        
+        /* Footer */
+        .footer {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #e1e8ed;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            animation: fadeIn 1s ease-out 1.7s both;
+        }
+        
+        .social-links {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a img {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-3px) scale(1.1);
+        }
+        
+        .social-links a:hover img {
+            filter: drop-shadow(0 4px 8px rgba(208, 2, 27, 0.3)) brightness(1.1);
+        }
+        
+        /* Loading animation */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            animation: fadeOut 0.5s ease-out 2s both;
+        }
+        
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(208, 2, 27, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--primary-color);
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes fadeOut {
+            from { opacity: 1; visibility: visible; }
+            to { opacity: 0; visibility: hidden; }
+        }
+        
+        /* RESPONSIVE DESIGN */
+        
+        /* Mobile Portrait */
+        @media screen and (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 30px 20px;
+                margin: 0;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .success-icon {
+                font-size: 3.5rem;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                margin: 30px 0;
+            }
+            
+            .info-card {
+                padding: 20px 15px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                padding: 15px 25px;
+            }
+            
+            .highlight-box {
+                padding: 20px 15px;
+            }
+            
+            .social-links {
+                gap: 12px;
+            }
+            
+            .social-links a img {
+                width: 45px;
+                height: 45px;
+            }
+        }
+        
+        /* iPhone specific fixes */
+        @supports (-webkit-touch-callout: none) {
+            body {
+                min-height: -webkit-fill-available;
+            }
+            
+            .container {
+                margin-bottom: env(safe-area-inset-bottom, 0);
+            }
+        }
+        
+        /* Tablet */
+        @media screen and (min-width: 481px) and (max-width: 1024px) {
+            .container {
+                padding: 50px 30px;
+            }
+            
+            h1 {
+                font-size: 3rem;
+            }
+            
+            .info-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+        
+        /* Desktop */
+        @media screen and (min-width: 1025px) {
+            body {
+                padding: 40px;
+            }
+            
+            .container {
+                max-width: 900px;
+            }
+            
+            .cta-buttons {
+                gap: 30px;
+            }
+            
+            .btn {
+                min-width: 220px;
+            }
+        }
+        
+        /* High DPI displays */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .logo img {
+                image-rendering: -webkit-optimize-contrast;
+                image-rendering: crisp-edges;
+            }
+        }
+        
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text-dark: #e1e8ed;
+                --text-light: #8899a6;
+                --bg-light: #2c3e50;
+                --white: #34495e;
+            }
+        }
+        
+        /* Reduce motion */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            .success-icon {
+                animation: none;
+            }
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                background: white !important;
+                color: black !important;
+            }
+            
+            .container {
+                box-shadow: none !important;
+                border: 1px solid #ddd;
+            }
+            
+            .cta-buttons,
+            .social-links {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading">
+        <div class="loading-spinner"></div>
+    </div>
+    
+    <div class="container">
+        <div class="logo">
+            <img src="https://www.jotform.com/uploads/PoloLaDotta/form_files/Logo%20LaDotta%20jotform.684bd334223e42.34157486.png" 
+                 alt="Polo La Dotta - Università Telematica"
+                 loading="lazy">
+        </div>
+        
+        <div class="success-icon" role="img" aria-label="Successo">✅</div>
+        
+        <h1 id="main-title">Grazie!</h1>
+        <p class="subtitle">La tua richiesta è stata inviata con successo</p>
+        
+        <div class="highlight-box">
+            <h3>🎓 Il tuo percorso<span class="mobile-break"><br></span> universitario<span class="mobile-break"><br></span> inizia qui</h3>
+            <p>Siamo entusiasti di accompagnarti verso il tuo futuro accademico e professionale con Università Pegaso</p>
+        </div>
+        
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>📞 Prossimi Passi</h3>
+                <p>Un nostro <strong>tutor specializzato</strong> ti contatterà <strong>a breve</strong> per fornirti tutte le informazioni sui corsi di tuo interesse e le convenzioni disponibili.</p>
+                <p>Nel frattempo, controlla la tua email per la conferma dettagliata con tutte le informazioni sui costi e le agevolazioni.</p>
+            </div>
+            
+            <div class="info-card">
+                <h3>📧 I Nostri Contatti</h3>
+                <p><strong>Telefono:</strong><br><span class="phone-number">334&nbsp;2892&nbsp;100</span>&nbsp;(digitare&nbsp;2)</p>
+                <p><strong>Email:</strong><br><a href="mailto:ecpladotta@unipegaso.it"><strong>ecpladotta@unipegaso.it</strong></a></p>
+                
+                <div class="contact-icons">
+                    <div class="contact-row">
+                        <a href="https://api.whatsapp.com/send?phone=3760048067" target="_blank" title="WhatsApp" aria-label="Contattaci su WhatsApp">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                        </a>
+                        <span class="contact-label">WhatsApp</span>
+                    </div>
+                    <div class="contact-row">
+                        <a href="https://t.me/PegasoMercatorum" target="_blank" title="Telegram" aria-label="Unisciti al nostro Telegram">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+                        </a>
+                        <span class="contact-label">Telegram</span>
+                    </div>
+                </div>
+                
                 <p><strong>Sito web:</strong><br><strong><a href="http://www.pololadotta.it">www.pololadotta.it</a></strong></p>
                 <p><strong>Orari:</strong><br><span class="schedule-text">Lun-Ven 9:00-18:30<br>Sab 9:30-12:30</span></p>
                 <p>Per qualsiasi domanda urgente, siamo qui per aiutarti!</p>
